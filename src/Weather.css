@@ -1,0 +1,158 @@
+/* Overall container styling */
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: url('https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the entire viewport */
+    position: relative;
+    color: white;
+    min-height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide any overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Overlay for better readability */
+  .weather-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text contrast */
+    z-index: 0;
+  }
+  
+  /* Small decorative image */
+  .small-image {
+    position: absolute;
+    bottom: 20px; /* Adjust positioning as needed */
+    right: 20px;  /* Adjust positioning as needed */
+    width: 80px;  /* Adjust size as needed */
+    opacity: 0.8; /* Slightly transparent */
+    z-index: 1;
+  }
+  
+  /* Form styling */
+  .weather-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.7); /* More transparent background for form */
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners for form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for form */
+    max-width: 90%;
+    width: 400px; /* Set a maximum width */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Responsive form input */
+  .weather-form input {
+    padding: 14px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.7); /* More transparent background for input */
+  }
+  
+  /* Adjust input on focus */
+  .weather-form input:focus {
+    border-color: #00bfff;
+    box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+  }
+  
+  /* Responsive button */
+  .weather-form button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 25px;
+    background-color: #00bfff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%; /* Full width for the button */
+  }
+  
+  /* Button hover effect */
+  .weather-form button:hover {
+    background-color: #009acd;
+    transform: scale(1.05);
+  }
+  
+  /* Weather info styling */
+  .weather-info {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8); /* Darker background for readability */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    width: 400px; /* Set a maximum width */
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Responsive typography */
+  .weather-info h2 {
+    margin: 10px 0;
+    font-size: 2em; /* Responsive font size */
+    color: #ffeb3b;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .weather-info p {
+    margin: 8px 0;
+    font-size: 1.1em; /* Responsive font size */
+    color: #eeeeee;
+  }
+  
+  /* Loading message styling */
+  .loading-message {
+    font-size: 1.2em; /* Responsive font size */
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .weather-form {
+      width: 90%; /* Adjust width for smaller screens */
+    }
+  
+    .weather-info {
+      width: 90%; /* Adjust width for smaller screens */
+    }
+  
+    .weather-info h2 {
+      font-size: 1.5em; /* Smaller font size for smaller screens */
+    }
+  
+    .weather-info p {
+      font-size: 1em; /* Smaller font size for smaller screens */
+    }
+  
+    .weather-form input,
+    .weather-form button {
+      font-size: 1em; /* Adjust font size for smaller screens */
+    }
+  }
+  
